@@ -39,15 +39,24 @@ const searchJobs = async (page, config) => {
     await page.waitForSelector(midSeniorLabelSelector, { timeout: 60000 });
     await page.click(midSeniorLabelSelector);
 
-    const buttonSelector = ".artdeco-button__text";
-    await page.waitForSelector(buttonSelector, { timeout: 60000 });
-    await page.click(buttonSelector);
-    console.log('Clicked on "Apply" button');
+    //Checkpoint reached
+
+    
+    const applyExperienceFilter = ".artdeco-button--primary";
+    await page.waitForSelector(applyExperienceFilter, { timeout: 60000 });
+    await page.click(applyExperienceFilter);
+    
+    console.log("Checkpoint reached");
+
+
 
     // Click "Easy Apply" filter if enabled
-    await page.waitForSelector('#searchFilter_applyWithLinkedin', { timeout: 60000 });
-    await page.click('#searchFilter_applyWithLinkedin');
+    await page.waitForSelector('#searchFilter_applyWithLinkedin', { visible: true, timeout: 60000 });
+    await page.evaluate(() => {
+    document.querySelector('#searchFilter_applyWithLinkedin').click();
+    });
     console.log('Clicked on "Easy Apply" filter');
+
 
     await wait(20000);
   } catch (error) {

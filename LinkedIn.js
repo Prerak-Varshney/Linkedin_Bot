@@ -6,6 +6,7 @@ const searchJobs = require('./searchJobs');
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
+  await page.setViewport({ width: 1000, height: 730});
   page.setDefaultNavigationTimeout(120000);
 
   try {
