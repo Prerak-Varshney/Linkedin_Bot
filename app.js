@@ -10,9 +10,7 @@ puppeteer.use(StealthPlugin());
 const app = async() => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-
   await page.setViewport({ width: 1000, height: 730});
-  
   page.setDefaultNavigationTimeout(GLOBAL_WAIT_TIME_FOR_SELECTORS);
 
   try {
