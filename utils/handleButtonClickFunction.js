@@ -1,4 +1,7 @@
-import { GLOBAL_WAIT_TIME_BETWEEN_LOCAL_EVENTS, GLOBAL_WAIT_TIME_FOR_SELECTORS } from '../config/env.js';
+import { 
+  GLOBAL_WAIT_TIME_BETWEEN_LOCAL_EVENTS, 
+  GLOBAL_WAIT_TIME_FOR_SELECTORS 
+} from '../constants/exports.js';
 
 const buttonClick = async(page, elementName, isIndexed = false, index = 0) => {
   if(!index){

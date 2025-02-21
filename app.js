@@ -1,8 +1,14 @@
-import puppeteer from 'puppeteer-extra';
-import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+// import puppeteer from 'puppeteer-extra';
+// import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+// import linkedinBot from './lib/linkdin.js';
+// import { GLOBAL_WAIT_TIME_FOR_SELECTORS } from './config/env.js';
 
-import linkedinBot from './lib/LinkedIn.js';
-import { GLOBAL_WAIT_TIME_FOR_SELECTORS } from './config/env.js';
+import {
+  puppeteer,
+  StealthPlugin,
+  linkedinBot,
+  GLOBAL_WAIT_TIME_FOR_SELECTORS
+} from './constants/exports.js';
 
 //middlewares
 puppeteer.use(StealthPlugin());
