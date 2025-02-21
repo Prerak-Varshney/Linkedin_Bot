@@ -14,8 +14,8 @@ export const experienceFilters = {
 };
 
 export const datePostedFilters = {
-    anytime: 'timePostedRange-',
-    pastMonth: 'timePostedRange-r2592000',
-    pastWeek: 'timePostedRange-r2592000',
-    past24Hours: 'timePostedRange-r86400'
+    anytime: '#timePostedRange-',
+    pastMonth: '#timePostedRange-r2592000',
+    pastWeek: '#timePostedRange-r604800',
+    past24Hours: '#timePostedRange-r86400'
 };
