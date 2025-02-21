@@ -6,3 +6,10 @@ export const experienceFilters = {
     lead: '#experience-5',
     director: '#experience-6'
 }
+
+export const datePostedFilters = {
+    anytime: 'timePostedRange-',
+    pastMonth: 'timePostedRange-r2592000',
+    pastWeek: 'timePostedRange-r2592000',
+    past24Hours: 'timePostedRange-r86400'
+}
