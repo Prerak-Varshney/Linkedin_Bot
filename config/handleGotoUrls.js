@@ -1,4 +1,4 @@
-export default async function handleGoto(page, url) {
+export default async function handleGotoUrls(page, url) {
     try {
       await page.goto(url, {
         waitUntil: 'domcontentloaded',
