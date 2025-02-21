@@ -1,0 +1,9 @@
+# Node Modules
+node_modules
+
+# env
+.env
+.env.*.local
+
+# Temp
+temp.txt
