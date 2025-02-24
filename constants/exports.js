@@ -1,6 +1,9 @@
+//Puppemaster
+import puppeMaster from '../config/puppeMaster.js';
+
 //constants
 import { buttonClasses } from './buttons.js';
-import { parentFilters, datePostedFilters, experienceFilters } from './filters.js';
+import { parentFilters, experienceFilters, datePostedFilters } from './filters.js';
 import { JOBS_URL, LOGIN_URL } from './urls.js';
 
 //config
@@ -13,18 +16,24 @@ import beforeClickOnEasyApply from '../lib/beforeClickOnEasyApply.js';
 import searchJobs from '../lib/searchJobs.js';
 import loginToLinkedIn from '../lib/login.js';
 import linkedinBot from '../lib/linkedin.js';
+import setAnswersToFormQuestions from '../lib/setAnswersToFormQuestions.js';
 
 //utils
-import getTotalCountFromText from '../utils/getTotalCountFromText.js';
+import getTextFromSelector from '../utils/getTextFromSelector.js';
 import handleJobSearchQuery from '../utils/handleSearchQuery.js';
-import handleButtonClickFunction from '../utils/handleButtonClickFunction.js';
+import buttonClick from '../utils/handleButtonClickFunction.js';
 import handleFilters from '../utils/handleFilters.js';
+import timeOut from '../utils/timeOut.js';
+
+//security
+import bypass from '../security/bypass.js';
 
 export {
+    puppeMaster,
     buttonClasses,
-    parentFilters, 
-    datePostedFilters, 
+    parentFilters,
     experienceFilters,
+    datePostedFilters,
     JOBS_URL,
     LOGIN_URL,
     gotoUrls,
@@ -39,8 +48,11 @@ export {
     searchJobs,
     loginToLinkedIn,
     linkedinBot,
-    getTotalCountFromText,
+    setAnswersToFormQuestions,
+    getTextFromSelector,
     handleJobSearchQuery,
-    handleButtonClickFunction,
-    handleFilters
+    buttonClick,
+    handleFilters,
+    timeOut,
+    bypass
 };

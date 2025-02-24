@@ -19,8 +19,7 @@ const handleFilters = async ( page, parentFilter, filtersList, isButtonIndexed=f
     await buttonClick(
         page, 
         buttonClasses.primary, 
-        true, 
-        index
+        {isIndexed: true, index: index}
     );
     
     return;
